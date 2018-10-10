@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Journal
+@testable import JournalClient
 
 class JournalTests: XCTestCase {
     

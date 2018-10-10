@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D7FD2161B253000B195A /* BonjourManager.swift */; };
+		8D51D8012169B90A000B195A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D8002169B90A000B195A /* Logging.swift */; };
 		8D9D3EC3213D2DB900087E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */; };
 		8D9D3EC5213D2DB900087E46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC4213D2DB900087E46 /* ViewController.swift */; };
 		8D9D3EC7213D2DBC00087E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */; };
 		8D9D3ECA213D2DBC00087E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC8213D2DBC00087E46 /* Main.storyboard */; };
 		8D9D3ED6213D2DBC00087E46 /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3ED5213D2DBC00087E46 /* JournalTests.swift */; };
 		8D9D3EE1213D2DBC00087E46 /* JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EE0213D2DBC00087E46 /* JournalUITests.swift */; };
+		8DFCF56E216BE294004537E4 /* BonjourServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF56D216BE294004537E4 /* BonjourServer.swift */; };
+		8DFCF571216BE37B004537E4 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF570216BE37B004537E4 /* Socket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,19 +37,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D9D3EBF213D2DB900087E46 /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D51D7FD2161B253000B195A /* BonjourManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourManager.swift; sourceTree = "<group>"; };
+		8D51D8002169B90A000B195A /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		8D9D3EBF213D2DB900087E46 /* JournalClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D9D3EC4213D2DB900087E46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D9D3EC9213D2DBC00087E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D9D3ECB213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D9D3ECC213D2DBC00087E46 /* Journal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Journal.entitlements; sourceTree = "<group>"; };
-		8D9D3ED1213D2DBC00087E46 /* JournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D9D3ED1213D2DBC00087E46 /* JournalClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9D3ED5213D2DBC00087E46 /* JournalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTests.swift; sourceTree = "<group>"; };
 		8D9D3ED7213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D9D3EDC213D2DBC00087E46 /* JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D9D3EDC213D2DBC00087E46 /* JournalClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9D3EE0213D2DBC00087E46 /* JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUITests.swift; sourceTree = "<group>"; };
 		8D9D3EE2213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DFCF56D216BE294004537E4 /* BonjourServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourServer.swift; sourceTree = "<group>"; };
+		8DFCF570216BE37B004537E4 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +81,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D51D7DF2161A7E5000B195A /* Bonjour */ = {
+			isa = PBXGroup;
+			children = (
+				8D51D7FD2161B253000B195A /* BonjourManager.swift */,
+				8DFCF56D216BE294004537E4 /* BonjourServer.swift */,
+			);
+			path = Bonjour;
+			sourceTree = "<group>";
+		};
+		8D51D7FF2169B8DE000B195A /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				8D51D8002169B90A000B195A /* Logging.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		8D9D3EB6213D2DB900087E46 = {
 			isa = PBXGroup;
 			children = (
-				8D9D3EC1213D2DB900087E46 /* Journal */,
-				8D9D3ED4213D2DBC00087E46 /* JournalTests */,
-				8D9D3EDF213D2DBC00087E46 /* JournalUITests */,
+				8D9D3EC1213D2DB900087E46 /* JournalClient */,
+				8D9D3ED4213D2DBC00087E46 /* JournalClientTests */,
+				8D9D3EDF213D2DBC00087E46 /* JournalClientUITests */,
 				8D9D3EC0213D2DB900087E46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,16 +111,19 @@
 		8D9D3EC0213D2DB900087E46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D9D3EBF213D2DB900087E46 /* Journal.app */,
-				8D9D3ED1213D2DBC00087E46 /* JournalTests.xctest */,
-				8D9D3EDC213D2DBC00087E46 /* JournalUITests.xctest */,
+				8D9D3EBF213D2DB900087E46 /* JournalClient.app */,
+				8D9D3ED1213D2DBC00087E46 /* JournalClientTests.xctest */,
+				8D9D3EDC213D2DBC00087E46 /* JournalClientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8D9D3EC1213D2DB900087E46 /* Journal */ = {
+		8D9D3EC1213D2DB900087E46 /* JournalClient */ = {
 			isa = PBXGroup;
 			children = (
+				8DFCF56F216BE370004537E4 /* Utilities */,
+				8D51D7FF2169B8DE000B195A /* Logging */,
+				8D51D7DF2161A7E5000B195A /* Bonjour */,
 				8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */,
 				8D9D3EC4213D2DB900087E46 /* ViewController.swift */,
 				8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */,
@@ -103,33 +131,41 @@
 				8D9D3ECB213D2DBC00087E46 /* Info.plist */,
 				8D9D3ECC213D2DBC00087E46 /* Journal.entitlements */,
 			);
-			path = Journal;
+			path = JournalClient;
 			sourceTree = "<group>";
 		};
-		8D9D3ED4213D2DBC00087E46 /* JournalTests */ = {
+		8D9D3ED4213D2DBC00087E46 /* JournalClientTests */ = {
 			isa = PBXGroup;
 			children = (
 				8D9D3ED5213D2DBC00087E46 /* JournalTests.swift */,
 				8D9D3ED7213D2DBC00087E46 /* Info.plist */,
 			);
-			path = JournalTests;
+			path = JournalClientTests;
 			sourceTree = "<group>";
 		};
-		8D9D3EDF213D2DBC00087E46 /* JournalUITests */ = {
+		8D9D3EDF213D2DBC00087E46 /* JournalClientUITests */ = {
 			isa = PBXGroup;
 			children = (
 				8D9D3EE0213D2DBC00087E46 /* JournalUITests.swift */,
 				8D9D3EE2213D2DBC00087E46 /* Info.plist */,
 			);
-			path = JournalUITests;
+			path = JournalClientUITests;
+			sourceTree = "<group>";
+		};
+		8DFCF56F216BE370004537E4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8DFCF570216BE37B004537E4 /* Socket.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D9D3EBE213D2DB900087E46 /* Journal */ = {
+		8D9D3EBE213D2DB900087E46 /* JournalClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D9D3EE5213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "Journal" */;
+			buildConfigurationList = 8D9D3EE5213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalClient" */;
 			buildPhases = (
 				8D9D3EBB213D2DB900087E46 /* Sources */,
 				8D9D3EBC213D2DB900087E46 /* Frameworks */,
@@ -139,14 +175,14 @@
 			);
 			dependencies = (
 			);
-			name = Journal;
+			name = JournalClient;
 			productName = Journal;
-			productReference = 8D9D3EBF213D2DB900087E46 /* Journal.app */;
+			productReference = 8D9D3EBF213D2DB900087E46 /* JournalClient.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8D9D3ED0213D2DBC00087E46 /* JournalTests */ = {
+		8D9D3ED0213D2DBC00087E46 /* JournalClientTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D9D3EE8213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalTests" */;
+			buildConfigurationList = 8D9D3EE8213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalClientTests" */;
 			buildPhases = (
 				8D9D3ECD213D2DBC00087E46 /* Sources */,
 				8D9D3ECE213D2DBC00087E46 /* Frameworks */,
@@ -157,14 +193,14 @@
 			dependencies = (
 				8D9D3ED3213D2DBC00087E46 /* PBXTargetDependency */,
 			);
-			name = JournalTests;
+			name = JournalClientTests;
 			productName = JournalTests;
-			productReference = 8D9D3ED1213D2DBC00087E46 /* JournalTests.xctest */;
+			productReference = 8D9D3ED1213D2DBC00087E46 /* JournalClientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8D9D3EDB213D2DBC00087E46 /* JournalUITests */ = {
+		8D9D3EDB213D2DBC00087E46 /* JournalClientUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D9D3EEB213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalUITests" */;
+			buildConfigurationList = 8D9D3EEB213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalClientUITests" */;
 			buildPhases = (
 				8D9D3ED8213D2DBC00087E46 /* Sources */,
 				8D9D3ED9213D2DBC00087E46 /* Frameworks */,
@@ -175,9 +211,9 @@
 			dependencies = (
 				8D9D3EDE213D2DBC00087E46 /* PBXTargetDependency */,
 			);
-			name = JournalUITests;
+			name = JournalClientUITests;
 			productName = JournalUITests;
-			productReference = 8D9D3EDC213D2DBC00087E46 /* JournalUITests.xctest */;
+			productReference = 8D9D3EDC213D2DBC00087E46 /* JournalClientUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +239,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D9D3EBA213D2DB900087E46 /* Build configuration list for PBXProject "Journal" */;
+			buildConfigurationList = 8D9D3EBA213D2DB900087E46 /* Build configuration list for PBXProject "JournalClient" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,9 +252,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D9D3EBE213D2DB900087E46 /* Journal */,
-				8D9D3ED0213D2DBC00087E46 /* JournalTests */,
-				8D9D3EDB213D2DBC00087E46 /* JournalUITests */,
+				8D9D3EBE213D2DB900087E46 /* JournalClient */,
+				8D9D3ED0213D2DBC00087E46 /* JournalClientTests */,
+				8D9D3EDB213D2DBC00087E46 /* JournalClientUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9D3EC5213D2DB900087E46 /* ViewController.swift in Sources */,
+				8D51D8012169B90A000B195A /* Logging.swift in Sources */,
+				8DFCF571216BE37B004537E4 /* Socket.swift in Sources */,
+				8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */,
+				8DFCF56E216BE294004537E4 /* BonjourServer.swift in Sources */,
 				8D9D3EC3213D2DB900087E46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,12 +320,12 @@
 /* Begin PBXTargetDependency section */
 		8D9D3ED3213D2DBC00087E46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D9D3EBE213D2DB900087E46 /* Journal */;
+			target = 8D9D3EBE213D2DB900087E46 /* JournalClient */;
 			targetProxy = 8D9D3ED2213D2DBC00087E46 /* PBXContainerItemProxy */;
 		};
 		8D9D3EDE213D2DBC00087E46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D9D3EBE213D2DB900087E46 /* Journal */;
+			target = 8D9D3EBE213D2DB900087E46 /* JournalClient */;
 			targetProxy = 8D9D3EDD213D2DBC00087E46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -419,15 +459,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Journal/Journal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JournalClient/JournalClient.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Journal/Info.plist;
+				INFOPLIST_FILE = JournalClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.Journal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -437,15 +477,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Journal/Journal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JournalClient/JournalClient.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Journal/Info.plist;
+				INFOPLIST_FILE = JournalClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.Journal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -467,7 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Journal.app/Contents/MacOS/Journal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JournalClient.app/Contents/MacOS/JournalClient";
 			};
 			name = Debug;
 		};
@@ -487,7 +527,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Journal.app/Contents/MacOS/Journal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JournalClient.app/Contents/MacOS/JournalClient";
 			};
 			name = Release;
 		};
@@ -532,7 +572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8D9D3EBA213D2DB900087E46 /* Build configuration list for PBXProject "Journal" */ = {
+		8D9D3EBA213D2DB900087E46 /* Build configuration list for PBXProject "JournalClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D9D3EE3213D2DBC00087E46 /* Debug */,
@@ -541,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D9D3EE5213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "Journal" */ = {
+		8D9D3EE5213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D9D3EE6213D2DBC00087E46 /* Debug */,
@@ -550,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D9D3EE8213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalTests" */ = {
+		8D9D3EE8213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalClientTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D9D3EE9213D2DBC00087E46 /* Debug */,
@@ -559,7 +599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D9D3EEB213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalUITests" */ = {
+		8D9D3EEB213D2DBC00087E46 /* Build configuration list for PBXNativeTarget "JournalClientUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D9D3EEC213D2DBC00087E46 /* Debug */,
