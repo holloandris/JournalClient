@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
     
     let bonjourManager = BonjourManager()
     
@@ -35,9 +35,18 @@ class ViewController: NSViewController {
         }
     }
     
-    private func handleConnectionStatusChanged(status: String) {
+    private func handleConnectionStatusChanged(status: BonjourServerConnectionStatus) {
+        var statusText = ""
+        switch status {
+        case .idle:
+            statusText = "Idle"
+        case .listening:
+            statusText = "Listening"
+        case .connected:
+            statusText = "Connected"
+        }
         DispatchQueue.main.async {
-            self.statusLabel.stringValue = status
+            self.statusLabel.stringValue = statusText
         }
     }
     

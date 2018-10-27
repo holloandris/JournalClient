@@ -11,7 +11,7 @@ import Foundation
 class BonjourManager: BonjourServerDelegate, SocketDelegate {
     
     var handleMessageArrived: ((String) -> Void)?
-    var handleConnectionStatusChanged: ((String) -> Void)?
+    var handleConnectionStatusChanged: ((BonjourServerConnectionStatus) -> Void)?
     
     private let port = 9999
     
@@ -34,18 +34,18 @@ class BonjourManager: BonjourServerDelegate, SocketDelegate {
     
     // MARK: - BonjourServerDelegate
     
-    func bonjourServer(didChangeConnectionStatus connectionStatus: String) {
+    func bonjourServer(didChangeConnectionStatus connectionStatus: BonjourServerConnectionStatus) {
         handleConnectionStatusChanged?(connectionStatus)
     }
     
     // MARK: - SocketDelegate
     
     func socketDidConnect() {
-        
+        handleConnectionStatusChanged?(.connected)
     }
     
     func socketDidDisconnect() {
-        
+        handleConnectionStatusChanged?(.listening)
     }
     
     func socket(didReceiveMessage message: String) {

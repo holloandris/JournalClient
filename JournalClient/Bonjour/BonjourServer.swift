@@ -8,8 +8,12 @@
 
 import Foundation
 
+enum BonjourServerConnectionStatus {
+    case idle, listening, connected
+}
+
 protocol BonjourServerDelegate: AnyObject {
-    func bonjourServer(didChangeConnectionStatus: String)
+    func bonjourServer(didChangeConnectionStatus: BonjourServerConnectionStatus)
 }
 
 class BonjourServer: NSObject, NetServiceDelegate {
@@ -35,32 +39,17 @@ class BonjourServer: NSObject, NetServiceDelegate {
     
     func netServiceDidPublish(_ sender: NetService) {
         logInfo("Bonjour service did publish")
-        delegate?.bonjourServer(didChangeConnectionStatus: "Listening")
-    }
-    
-    func netServiceDidStop(_ sender: NetService) {
-        logDebug("Bonjour service did stop")
-        delegate?.bonjourServer(didChangeConnectionStatus: "Idle")
+        delegate?.bonjourServer(didChangeConnectionStatus: .listening)
     }
     
     func netService(_ sender: NetService, didNotPublish errorDict: [String : NSNumber]) {
         logError("Bonjour service did not publish: \(errorDict)")
+        delegate?.bonjourServer(didChangeConnectionStatus: .idle)
     }
     
-    func netService(_ sender: NetService, didNotResolve errorDict: [String : NSNumber]) {
-        logError("Bonjour service did not resolve: \(errorDict)")
-    }
-    
-    func netService(_ sender: NetService, didAcceptConnectionWith inputStream: InputStream, outputStream: OutputStream) {
-        logDebug("Bonjour service did accept connection")
-    }
-    
-    func netServiceDidResolveAddress(_ sender: NetService) {
-        logDebug("Bonjour service did resolve address")
-    }
-    
-    func netService(_ sender: NetService, didUpdateTXTRecord data: Data) {
-        logDebug("Bonjour service did update TXT record")
+    func netServiceDidStop(_ sender: NetService) {
+        logInfo("Bonjour service did stop")
+        delegate?.bonjourServer(didChangeConnectionStatus: .idle)
     }
     
 }

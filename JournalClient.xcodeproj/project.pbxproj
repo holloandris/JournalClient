@@ -10,7 +10,7 @@
 		8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D7FD2161B253000B195A /* BonjourManager.swift */; };
 		8D51D8012169B90A000B195A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D8002169B90A000B195A /* Logging.swift */; };
 		8D9D3EC3213D2DB900087E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */; };
-		8D9D3EC5213D2DB900087E46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC4213D2DB900087E46 /* ViewController.swift */; };
+		8D9D3EC5213D2DB900087E46 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC4213D2DB900087E46 /* MainViewController.swift */; };
 		8D9D3EC7213D2DBC00087E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */; };
 		8D9D3ECA213D2DBC00087E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC8213D2DBC00087E46 /* Main.storyboard */; };
 		8D9D3ED6213D2DBC00087E46 /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3ED5213D2DBC00087E46 /* JournalTests.swift */; };
@@ -41,7 +41,7 @@
 		8D51D8002169B90A000B195A /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		8D9D3EBF213D2DB900087E46 /* JournalClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D9D3EC4213D2DB900087E46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D9D3EC4213D2DB900087E46 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D9D3EC9213D2DBC00087E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D9D3ECB213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0F7EFB218411B500313605 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8D0F7EFC218411C000313605 /* MainScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8D0F7EFC218411C000313605 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D3EC4213D2DB900087E46 /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		8D51D7DF2161A7E5000B195A /* Bonjour */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,11 +137,11 @@
 		8D9D3EC1213D2DB900087E46 /* JournalClient */ = {
 			isa = PBXGroup;
 			children = (
+				8D0F7EFB218411B500313605 /* Screens */,
 				8DFCF56F216BE370004537E4 /* Utilities */,
 				8D51D7FF2169B8DE000B195A /* Logging */,
 				8D51D7DF2161A7E5000B195A /* Bonjour */,
 				8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */,
-				8D9D3EC4213D2DB900087E46 /* ViewController.swift */,
 				8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */,
 				8D9D3EC8213D2DBC00087E46 /* Main.storyboard */,
 				8D9D3ECB213D2DBC00087E46 /* Info.plist */,
@@ -290,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D9D3EC5213D2DB900087E46 /* ViewController.swift in Sources */,
+				8D9D3EC5213D2DB900087E46 /* MainViewController.swift in Sources */,
 				8D51D8012169B90A000B195A /* Logging.swift in Sources */,
 				8DFCF571216BE37B004537E4 /* Socket.swift in Sources */,
 				8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */,
