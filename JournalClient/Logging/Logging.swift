@@ -6,7 +6,7 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-enum LogLevel: Int {
+enum InternalLogLevel: Int {
     case error = 5
     case warning = 4
     case info = 3
@@ -14,9 +14,9 @@ enum LogLevel: Int {
     case verbose = 1
 }
 
-let logVerbosity = LogLevel.verbose
+let logVerbosity = InternalLogLevel.verbose
 
-func log(level: LogLevel, message: String) {
+func log(level: InternalLogLevel, message: String) {
     if logVerbosity.rawValue <= level.rawValue {
         print(message)
     }

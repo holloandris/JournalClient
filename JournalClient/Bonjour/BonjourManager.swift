@@ -8,7 +8,13 @@
 
 import Foundation
 
-class BonjourManager: BonjourServerDelegate, SocketDelegate {
+protocol BonjourManagerProtocol {
+    var handleMessageArrived: ((String) -> Void)? { get set }
+    var handleConnectionStatusChanged: ((BonjourServerConnectionStatus) -> Void)? { get set }
+    func startAdvertising()
+}
+
+class BonjourManager: BonjourManagerProtocol, BonjourServerDelegate, SocketDelegate {
     
     var handleMessageArrived: ((String) -> Void)?
     var handleConnectionStatusChanged: ((BonjourServerConnectionStatus) -> Void)?

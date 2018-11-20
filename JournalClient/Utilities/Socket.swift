@@ -59,8 +59,8 @@ class Socket: NSObject, StreamDelegate {
         inputStream.delegate = self
         outputStream.delegate = self
         
-        inputStream.schedule(in: .main, forMode: .commonModes)
-        outputStream.schedule(in: .main, forMode: .commonModes)
+        inputStream.schedule(in: .main, forMode: RunLoop.Mode.common)
+        outputStream.schedule(in: .main, forMode: RunLoop.Mode.common)
         
         inputStream.open()
         outputStream.open()
@@ -85,7 +85,7 @@ class Socket: NSObject, StreamDelegate {
     
     // MARK: - StreamDelegate
     
-    public func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
+    func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
         switch eventCode {
         case Stream.Event.openCompleted:
             logInfo("Socket opening completed")
@@ -130,8 +130,8 @@ class Socket: NSObject, StreamDelegate {
         inputStream.delegate = self
         outputStream.delegate = self
         
-        inputStream.schedule(in: .main, forMode: .commonModes)
-        outputStream.schedule(in: .main, forMode: .commonModes)
+        inputStream.schedule(in: .main, forMode: RunLoop.Mode.common)
+        outputStream.schedule(in: .main, forMode: RunLoop.Mode.common)
         
         inputStream.open()
         outputStream.open()

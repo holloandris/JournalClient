@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3785F321863CF100B4B33D /* LogEntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3785F221863CF100B4B33D /* LogEntryStore.swift */; };
+		8D3785F621863E4C00B4B33D /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3785F521863E4C00B4B33D /* LogEntry.swift */; };
+		8D3785F821865D9400B4B33D /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3785F721865D9400B4B33D /* LogLevel.swift */; };
+		8D3785FA218693D000B4B33D /* LogEntriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3785F9218693D000B4B33D /* LogEntriesManager.swift */; };
+		8D3785FC2186967400B4B33D /* MainComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3785FB2186967400B4B33D /* MainComponents.swift */; };
 		8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D7FD2161B253000B195A /* BonjourManager.swift */; };
 		8D51D8012169B90A000B195A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D8002169B90A000B195A /* Logging.swift */; };
+		8D604B6D2196ADB500F969C6 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B6C2196ADB500F969C6 /* FilterViewController.swift */; };
+		8D604B6F2196ADC900F969C6 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B6E2196ADC900F969C6 /* HeaderViewController.swift */; };
+		8D604B712196AE0F00F969C6 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B702196AE0F00F969C6 /* ConsoleViewController.swift */; };
+		8D604B732196B35D00F969C6 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B722196B35D00F969C6 /* MulticastDelegate.swift */; };
 		8D9D3EC3213D2DB900087E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */; };
-		8D9D3EC5213D2DB900087E46 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC4213D2DB900087E46 /* MainViewController.swift */; };
 		8D9D3EC7213D2DBC00087E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */; };
 		8D9D3ECA213D2DBC00087E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D3EC8213D2DBC00087E46 /* Main.storyboard */; };
-		8D9D3ED6213D2DBC00087E46 /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3ED5213D2DBC00087E46 /* JournalTests.swift */; };
-		8D9D3EE1213D2DBC00087E46 /* JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EE0213D2DBC00087E46 /* JournalUITests.swift */; };
+		8D9D3ED6213D2DBC00087E46 /* JournalClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3ED5213D2DBC00087E46 /* JournalClientTests.swift */; };
+		8D9D3EE1213D2DBC00087E46 /* JournalClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EE0213D2DBC00087E46 /* JournalClientUITests.swift */; };
 		8DFCF56E216BE294004537E4 /* BonjourServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF56D216BE294004537E4 /* BonjourServer.swift */; };
 		8DFCF571216BE37B004537E4 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF570216BE37B004537E4 /* Socket.swift */; };
 /* End PBXBuildFile section */
@@ -37,20 +45,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D3785F221863CF100B4B33D /* LogEntryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryStore.swift; sourceTree = "<group>"; };
+		8D3785F521863E4C00B4B33D /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		8D3785F721865D9400B4B33D /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		8D3785F9218693D000B4B33D /* LogEntriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntriesManager.swift; sourceTree = "<group>"; };
+		8D3785FB2186967400B4B33D /* MainComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComponents.swift; sourceTree = "<group>"; };
 		8D51D7FD2161B253000B195A /* BonjourManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourManager.swift; sourceTree = "<group>"; };
 		8D51D8002169B90A000B195A /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		8D604B6C2196ADB500F969C6 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		8D604B6E2196ADC900F969C6 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		8D604B702196AE0F00F969C6 /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
+		8D604B722196B35D00F969C6 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		8D9D3EBF213D2DB900087E46 /* JournalClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9D3EC2213D2DB900087E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D9D3EC4213D2DB900087E46 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D9D3EC9213D2DBC00087E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D9D3ECB213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D9D3ECC213D2DBC00087E46 /* Journal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Journal.entitlements; sourceTree = "<group>"; };
+		8D9D3ECC213D2DBC00087E46 /* JournalClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalClient.entitlements; sourceTree = "<group>"; };
 		8D9D3ED1213D2DBC00087E46 /* JournalClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D9D3ED5213D2DBC00087E46 /* JournalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTests.swift; sourceTree = "<group>"; };
+		8D9D3ED5213D2DBC00087E46 /* JournalClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalClientTests.swift; sourceTree = "<group>"; };
 		8D9D3ED7213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D9D3EDC213D2DBC00087E46 /* JournalClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D9D3EE0213D2DBC00087E46 /* JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUITests.swift; sourceTree = "<group>"; };
+		8D9D3EE0213D2DBC00087E46 /* JournalClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalClientUITests.swift; sourceTree = "<group>"; };
 		8D9D3EE2213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DFCF56D216BE294004537E4 /* BonjourServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourServer.swift; sourceTree = "<group>"; };
 		8DFCF570216BE37B004537E4 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
@@ -92,9 +108,37 @@
 		8D0F7EFC218411C000313605 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8D9D3EC4213D2DB900087E46 /* MainViewController.swift */,
+				8D604B6C2196ADB500F969C6 /* FilterViewController.swift */,
+				8D604B6E2196ADC900F969C6 /* HeaderViewController.swift */,
+				8D604B702196AE0F00F969C6 /* ConsoleViewController.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		8D3785F121863C8700B4B33D /* LogEntries */ = {
+			isa = PBXGroup;
+			children = (
+				8D3785F221863CF100B4B33D /* LogEntryStore.swift */,
+				8D3785F9218693D000B4B33D /* LogEntriesManager.swift */,
+			);
+			path = LogEntries;
+			sourceTree = "<group>";
+		};
+		8D3785F421863E3B00B4B33D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8D3785F521863E4C00B4B33D /* LogEntry.swift */,
+				8D3785F721865D9400B4B33D /* LogLevel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8D3785FD2186967800B4B33D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8D3785FB2186967400B4B33D /* MainComponents.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8D51D7DF2161A7E5000B195A /* Bonjour */ = {
@@ -137,6 +181,9 @@
 		8D9D3EC1213D2DB900087E46 /* JournalClient */ = {
 			isa = PBXGroup;
 			children = (
+				8D3785FD2186967800B4B33D /* Components */,
+				8D3785F421863E3B00B4B33D /* Entities */,
+				8D3785F121863C8700B4B33D /* LogEntries */,
 				8D0F7EFB218411B500313605 /* Screens */,
 				8DFCF56F216BE370004537E4 /* Utilities */,
 				8D51D7FF2169B8DE000B195A /* Logging */,
@@ -145,7 +192,7 @@
 				8D9D3EC6213D2DBC00087E46 /* Assets.xcassets */,
 				8D9D3EC8213D2DBC00087E46 /* Main.storyboard */,
 				8D9D3ECB213D2DBC00087E46 /* Info.plist */,
-				8D9D3ECC213D2DBC00087E46 /* Journal.entitlements */,
+				8D9D3ECC213D2DBC00087E46 /* JournalClient.entitlements */,
 			);
 			path = JournalClient;
 			sourceTree = "<group>";
@@ -153,7 +200,7 @@
 		8D9D3ED4213D2DBC00087E46 /* JournalClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D9D3ED5213D2DBC00087E46 /* JournalTests.swift */,
+				8D9D3ED5213D2DBC00087E46 /* JournalClientTests.swift */,
 				8D9D3ED7213D2DBC00087E46 /* Info.plist */,
 			);
 			path = JournalClientTests;
@@ -162,7 +209,7 @@
 		8D9D3EDF213D2DBC00087E46 /* JournalClientUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8D9D3EE0213D2DBC00087E46 /* JournalUITests.swift */,
+				8D9D3EE0213D2DBC00087E46 /* JournalClientUITests.swift */,
 				8D9D3EE2213D2DBC00087E46 /* Info.plist */,
 			);
 			path = JournalClientUITests;
@@ -172,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				8DFCF570216BE37B004537E4 /* Socket.swift */,
+				8D604B722196B35D00F969C6 /* MulticastDelegate.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -244,13 +292,16 @@
 				TargetAttributes = {
 					8D9D3EBE213D2DB900087E46 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					8D9D3ED0213D2DBC00087E46 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8D9D3EBE213D2DB900087E46;
 					};
 					8D9D3EDB213D2DBC00087E46 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8D9D3EBE213D2DB900087E46;
 					};
 				};
@@ -306,11 +357,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D9D3EC5213D2DB900087E46 /* MainViewController.swift in Sources */,
+				8D3785FC2186967400B4B33D /* MainComponents.swift in Sources */,
+				8D604B732196B35D00F969C6 /* MulticastDelegate.swift in Sources */,
 				8D51D8012169B90A000B195A /* Logging.swift in Sources */,
 				8DFCF571216BE37B004537E4 /* Socket.swift in Sources */,
+				8D604B712196AE0F00F969C6 /* ConsoleViewController.swift in Sources */,
 				8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */,
 				8DFCF56E216BE294004537E4 /* BonjourServer.swift in Sources */,
+				8D604B6D2196ADB500F969C6 /* FilterViewController.swift in Sources */,
+				8D3785FA218693D000B4B33D /* LogEntriesManager.swift in Sources */,
+				8D3785F621863E4C00B4B33D /* LogEntry.swift in Sources */,
+				8D604B6F2196ADC900F969C6 /* HeaderViewController.swift in Sources */,
+				8D3785F321863CF100B4B33D /* LogEntryStore.swift in Sources */,
+				8D3785F821865D9400B4B33D /* LogLevel.swift in Sources */,
 				8D9D3EC3213D2DB900087E46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D9D3ED6213D2DBC00087E46 /* JournalTests.swift in Sources */,
+				8D9D3ED6213D2DBC00087E46 /* JournalClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D9D3EE1213D2DBC00087E46 /* JournalUITests.swift in Sources */,
+				8D9D3EE1213D2DBC00087E46 /* JournalClientUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -503,7 +562,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -514,7 +573,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JournalTests/Info.plist;
+				INFOPLIST_FILE = JournalClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -522,7 +581,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JournalClient.app/Contents/MacOS/JournalClient";
 			};
 			name = Debug;
@@ -534,7 +593,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JournalTests/Info.plist;
+				INFOPLIST_FILE = JournalClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -542,7 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JournalClient.app/Contents/MacOS/JournalClient";
 			};
 			name = Release;
@@ -553,7 +612,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JournalUITests/Info.plist;
+				INFOPLIST_FILE = JournalClientUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -561,7 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Journal;
 			};
 			name = Debug;
@@ -572,7 +631,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = JournalUITests/Info.plist;
+				INFOPLIST_FILE = JournalClientUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -580,7 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.JournalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Journal;
 			};
 			name = Release;

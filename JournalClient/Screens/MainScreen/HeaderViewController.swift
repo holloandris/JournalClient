@@ -1,26 +1,26 @@
 //
-//  ViewController.swift
-//  Journal
+//  HeaderViewController.swift
+//  JournalClient
 //
-//  Created by Andras Hollo on 2018. 09. 03..
+//  Created by Andras Hollo on 2018. 11. 09..
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
 import Cocoa
 
-class MainViewController: NSViewController {
+class HeaderViewController: NSViewController {
     
-    let bonjourManager = BonjourManager()
+    // MARK: - Dependency properties
+    private var bonjourManager = MainComponents.shared.bonjourManager
     
+    // MARK: - Outlet properties
     @IBOutlet weak var statusLabel: NSTextField!
-    @IBOutlet var logsTextView: NSTextView!
+    
+    // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bonjourManager.handleMessageArrived = { [weak self] (message) in
-            self?.handleMessageArrived(message: message)
-        }
         bonjourManager.handleConnectionStatusChanged = { [weak self] (status) in
             self?.handleConnectionStatusChanged(status: status)
         }
@@ -28,12 +28,7 @@ class MainViewController: NSViewController {
         bonjourManager.startAdvertising()
     }
     
-    private func handleMessageArrived(message: String) {
-        DispatchQueue.main.async {
-            self.logsTextView.textStorage?.append(NSAttributedString(string: message))
-            self.logsTextView.scrollRangeToVisible(NSMakeRange(self.logsTextView.string.count, 0))
-        }
-    }
+    // MARK: - Event handler methods
     
     private func handleConnectionStatusChanged(status: BonjourServerConnectionStatus) {
         var statusText = ""

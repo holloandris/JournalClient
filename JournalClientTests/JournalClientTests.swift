@@ -1,6 +1,6 @@
 //
-//  JournalTests.swift
-//  JournalTests
+//  JournalClientTests.swift
+//  JournalClientTests
 //
 //  Created by Andras Hollo on 2018. 09. 03..
 //  Copyright © 2018. Andras Hollo. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import JournalClient
 
-class JournalTests: XCTestCase {
+class JournalClientTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
