@@ -144,20 +144,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE8-KR-M2R">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE8-KR-M2R">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="520"/>
                                 <clipView key="contentView" id="6hE-IA-Q9e">
                                     <rect key="frame" x="1" y="1" width="373" height="518"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" viewBased="YES" id="4Gy-YU-cFr">
-                                            <rect key="frame" x="0.0" y="0.0" width="558" height="518"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="20" rowSizeStyle="automatic" viewBased="YES" id="4Gy-YU-cFr">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="518"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="555" minWidth="40" maxWidth="1000" id="E01-nY-une">
+                                                <tableColumn width="369" minWidth="40" maxWidth="1000" id="E01-nY-une">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -170,8 +170,8 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="LogEntryCellIdentifier" misplaced="YES" id="qlY-rq-t1x">
-                                                            <rect key="frame" x="1" y="1" width="555" height="17"/>
+                                                        <tableCellView identifier="LogEntryCellIdentifier" id="qlY-rq-t1x" customClass="LogEntryTableCellView" customModule="JournalClient" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="369" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4P4-T1-y1C">
@@ -189,6 +189,9 @@
                                                                 <constraint firstItem="4P4-T1-y1C" firstAttribute="top" secondItem="qlY-rq-t1x" secondAttribute="top" id="C4d-fQ-ihb"/>
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4P4-T1-y1C" secondAttribute="trailing" constant="20" symbolic="YES" id="OEt-ot-xfz"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="logEntryTextField" destination="4P4-T1-y1C" id="kBz-o8-BAp"/>
+                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -196,7 +199,7 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="wYF-hl-pZh">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.20000000000000001" horizontal="YES" id="wYF-hl-pZh">
                                     <rect key="frame" x="1" y="503" width="373" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>

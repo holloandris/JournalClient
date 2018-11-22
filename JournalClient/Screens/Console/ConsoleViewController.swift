@@ -16,6 +16,9 @@ class ConsoleViewController: NSViewController, NSTableViewDelegate, NSTableViewD
     // MARK: - Outlet properties
     @IBOutlet weak var logEntriesTableView: NSTableView!
     
+    // MARK: - Private storage properties
+    private var logEntries = [LogEntry]()
+    
     // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
@@ -31,20 +34,23 @@ class ConsoleViewController: NSViewController, NSTableViewDelegate, NSTableViewD
     
     func logEntriesChanged() {
         DispatchQueue.main.async {
+            self.logEntries = self.logEntriesManager.logEntries
             self.logEntriesTableView.reloadData()
+            self.logEntriesTableView.scrollRowToVisible(self.logEntries.count-1)
         }
     }
     
     // MARK: - NSTableViewDataSource
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 1000
+        return logEntries.count
     }
     
     // MARK: - NSTableViewDelegate
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "LogEntryCellIdentifier"), owner: nil) as? NSTableCellView {
+        if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "LogEntryCellIdentifier"), owner: nil) as? LogEntryTableCellView {
+            cell.logEntryTextField.stringValue = logEntries[row].message
             return cell
         }
         return nil

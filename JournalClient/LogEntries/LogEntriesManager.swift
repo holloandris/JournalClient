@@ -14,6 +14,7 @@ protocol LogEntriesManagerDelegate {
 
 protocol LogEntriesManagerProtocol {
     var delegates: MulticastDelegate<LogEntriesManagerDelegate> { get set }
+    var logEntries: [LogEntry] { get }
 }
 
 class LogEntriesManager: LogEntriesManagerProtocol {
@@ -26,6 +27,9 @@ class LogEntriesManager: LogEntriesManagerProtocol {
     // MARK: - Public properties
     
     var delegates = MulticastDelegate<LogEntriesManagerDelegate>()
+    var logEntries: [LogEntry] {
+        return logEntryStore.logEntries
+    }
     
     // MARK: - Lifecycle methods
     
