@@ -14,7 +14,6 @@
 		8D3785FC2186967400B4B33D /* MainComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3785FB2186967400B4B33D /* MainComponents.swift */; };
 		8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D7FD2161B253000B195A /* BonjourManager.swift */; };
 		8D51D8012169B90A000B195A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D8002169B90A000B195A /* Logging.swift */; };
-		8D604B6D2196ADB500F969C6 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B6C2196ADB500F969C6 /* FilterViewController.swift */; };
 		8D604B6F2196ADC900F969C6 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B6E2196ADC900F969C6 /* HeaderViewController.swift */; };
 		8D604B712196AE0F00F969C6 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B702196AE0F00F969C6 /* ConsoleViewController.swift */; };
 		8D604B732196B35D00F969C6 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D604B722196B35D00F969C6 /* MulticastDelegate.swift */; };
@@ -24,6 +23,13 @@
 		8D9D3ED6213D2DBC00087E46 /* JournalClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3ED5213D2DBC00087E46 /* JournalClientTests.swift */; };
 		8D9D3EE1213D2DBC00087E46 /* JournalClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EE0213D2DBC00087E46 /* JournalClientUITests.swift */; };
 		8DC7207321A656110085C815 /* LogEntryTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC7207221A656110085C815 /* LogEntryTableCellView.swift */; };
+		8DDB144221A9217900586D37 /* LogLevelFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB144121A9217900586D37 /* LogLevelFilterViewController.swift */; };
+		8DDB144421A9218200586D37 /* ClassFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB144321A9218200586D37 /* ClassFilterViewController.swift */; };
+		8DDB144621A9219900586D37 /* ContextFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB144521A9219900586D37 /* ContextFilterViewController.swift */; };
+		8DDB144921A92FE300586D37 /* ClassLogEntryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB144821A92FE300586D37 /* ClassLogEntryFilter.swift */; };
+		8DDB144B21A92FF000586D37 /* ContextLogEntryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB144A21A92FF000586D37 /* ContextLogEntryFilter.swift */; };
+		8DDB144D21A9300700586D37 /* LogLevelLogEntryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB144C21A9300700586D37 /* LogLevelLogEntryFilter.swift */; };
+		8DDB144F21A9301900586D37 /* LogEntryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB144E21A9301900586D37 /* LogEntryFilter.swift */; };
 		8DFCF56E216BE294004537E4 /* BonjourServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF56D216BE294004537E4 /* BonjourServer.swift */; };
 		8DFCF571216BE37B004537E4 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF570216BE37B004537E4 /* Socket.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +59,6 @@
 		8D3785FB2186967400B4B33D /* MainComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComponents.swift; sourceTree = "<group>"; };
 		8D51D7FD2161B253000B195A /* BonjourManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourManager.swift; sourceTree = "<group>"; };
 		8D51D8002169B90A000B195A /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
-		8D604B6C2196ADB500F969C6 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		8D604B6E2196ADC900F969C6 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 		8D604B702196AE0F00F969C6 /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		8D604B722196B35D00F969C6 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +75,13 @@
 		8D9D3EE0213D2DBC00087E46 /* JournalClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalClientUITests.swift; sourceTree = "<group>"; };
 		8D9D3EE2213D2DBC00087E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC7207221A656110085C815 /* LogEntryTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryTableCellView.swift; sourceTree = "<group>"; };
+		8DDB144121A9217900586D37 /* LogLevelFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevelFilterViewController.swift; sourceTree = "<group>"; };
+		8DDB144321A9218200586D37 /* ClassFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFilterViewController.swift; sourceTree = "<group>"; };
+		8DDB144521A9219900586D37 /* ContextFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextFilterViewController.swift; sourceTree = "<group>"; };
+		8DDB144821A92FE300586D37 /* ClassLogEntryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassLogEntryFilter.swift; sourceTree = "<group>"; };
+		8DDB144A21A92FF000586D37 /* ContextLogEntryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextLogEntryFilter.swift; sourceTree = "<group>"; };
+		8DDB144C21A9300700586D37 /* LogLevelLogEntryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevelLogEntryFilter.swift; sourceTree = "<group>"; };
+		8DDB144E21A9301900586D37 /* LogEntryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryFilter.swift; sourceTree = "<group>"; };
 		8DFCF56D216BE294004537E4 /* BonjourServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourServer.swift; sourceTree = "<group>"; };
 		8DFCF570216BE37B004537E4 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +133,7 @@
 		8D3785F121863C8700B4B33D /* LogEntries */ = {
 			isa = PBXGroup;
 			children = (
+				8DDB144721A92FCB00586D37 /* Filters */,
 				8D3785F221863CF100B4B33D /* LogEntryStore.swift */,
 				8D3785F9218693D000B4B33D /* LogEntriesManager.swift */,
 			);
@@ -221,7 +234,9 @@
 		8DC7207021A654170085C815 /* Filtering */ = {
 			isa = PBXGroup;
 			children = (
-				8D604B6C2196ADB500F969C6 /* FilterViewController.swift */,
+				8DDB144121A9217900586D37 /* LogLevelFilterViewController.swift */,
+				8DDB144321A9218200586D37 /* ClassFilterViewController.swift */,
+				8DDB144521A9219900586D37 /* ContextFilterViewController.swift */,
 			);
 			path = Filtering;
 			sourceTree = "<group>";
@@ -232,6 +247,17 @@
 				8D604B6E2196ADC900F969C6 /* HeaderViewController.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		8DDB144721A92FCB00586D37 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				8DDB144821A92FE300586D37 /* ClassLogEntryFilter.swift */,
+				8DDB144A21A92FF000586D37 /* ContextLogEntryFilter.swift */,
+				8DDB144C21A9300700586D37 /* LogLevelLogEntryFilter.swift */,
+				8DDB144E21A9301900586D37 /* LogEntryFilter.swift */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 		8DFCF56F216BE370004537E4 /* Utilities */ = {
@@ -382,19 +408,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3785FC2186967400B4B33D /* MainComponents.swift in Sources */,
+				8DDB144B21A92FF000586D37 /* ContextLogEntryFilter.swift in Sources */,
 				8D604B732196B35D00F969C6 /* MulticastDelegate.swift in Sources */,
 				8D51D8012169B90A000B195A /* Logging.swift in Sources */,
 				8DC7207321A656110085C815 /* LogEntryTableCellView.swift in Sources */,
 				8DFCF571216BE37B004537E4 /* Socket.swift in Sources */,
+				8DDB144421A9218200586D37 /* ClassFilterViewController.swift in Sources */,
+				8DDB144621A9219900586D37 /* ContextFilterViewController.swift in Sources */,
 				8D604B712196AE0F00F969C6 /* ConsoleViewController.swift in Sources */,
 				8D51D7FE2161B253000B195A /* BonjourManager.swift in Sources */,
 				8DFCF56E216BE294004537E4 /* BonjourServer.swift in Sources */,
-				8D604B6D2196ADB500F969C6 /* FilterViewController.swift in Sources */,
 				8D3785FA218693D000B4B33D /* LogEntriesManager.swift in Sources */,
 				8D3785F621863E4C00B4B33D /* LogEntry.swift in Sources */,
 				8D604B6F2196ADC900F969C6 /* HeaderViewController.swift in Sources */,
+				8DDB144221A9217900586D37 /* LogLevelFilterViewController.swift in Sources */,
 				8D3785F321863CF100B4B33D /* LogEntryStore.swift in Sources */,
+				8DDB144F21A9301900586D37 /* LogEntryFilter.swift in Sources */,
+				8DDB144921A92FE300586D37 /* ClassLogEntryFilter.swift in Sources */,
 				8D3785F821865D9400B4B33D /* LogLevel.swift in Sources */,
+				8DDB144D21A9300700586D37 /* LogLevelLogEntryFilter.swift in Sources */,
 				8D9D3EC3213D2DB900087E46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="1415" y="624"/>
         </scene>
-        <!--Filter View Controller-->
+        <!--View Controller-->
         <scene sceneID="mUj-tj-iBw">
             <objects>
-                <viewController id="5ZV-Ir-Vp4" customClass="FilterViewController" customModule="JournalClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5ZV-Ir-Vp4" sceneMemberID="viewController">
                     <view key="view" id="NfQ-D6-Ura">
                         <rect key="frame" x="0.0" y="0.0" width="231" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -369,10 +369,10 @@
             </objects>
             <point key="canvasLocation" x="801" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--Log Level Filter View Controller-->
         <scene sceneID="Nbq-Mm-47q">
             <objects>
-                <viewController id="aci-9g-jor" sceneMemberID="viewController">
+                <viewController id="aci-9g-jor" customClass="LogLevelFilterViewController" customModule="JournalClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="5n2-hb-haZ">
                         <rect key="frame" x="0.0" y="0.0" width="225" height="118"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -386,6 +386,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="errorButtonClicked:" target="aci-9g-jor" id="Exq-CS-WXT"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="54f-Qe-o1C">
                                         <rect key="frame" x="-2" y="64" width="72" height="18"/>
@@ -393,6 +396,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="warningButtonClicked:" target="aci-9g-jor" id="MRq-iw-Eci"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FKM-h6-JBT">
                                         <rect key="frame" x="-2" y="42" width="45" height="18"/>
@@ -400,6 +406,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="infoButtonClicked:" target="aci-9g-jor" id="iR3-Bq-UuT"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tna-5l-FYG">
                                         <rect key="frame" x="-2" y="20" width="62" height="18"/>
@@ -407,6 +416,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="debugButtonClicked:" target="aci-9g-jor" id="NHn-hP-Lzy"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F2G-zW-sUF">
                                         <rect key="frame" x="-2" y="-2" width="72" height="18"/>
@@ -414,6 +426,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="verboseButtonClicked:" target="aci-9g-jor" id="OM8-Sa-6Yx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <visibilityPriorities>
@@ -438,15 +453,22 @@
                             <constraint firstItem="YoM-fK-81t" firstAttribute="leading" secondItem="5n2-hb-haZ" secondAttribute="leading" constant="20" id="hm0-eZ-a11"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="debugButton" destination="tna-5l-FYG" id="EhW-VL-VtG"/>
+                        <outlet property="errorButton" destination="7Gk-RK-2dj" id="wPh-N4-bCc"/>
+                        <outlet property="infoButton" destination="FKM-h6-JBT" id="8JV-ya-9nE"/>
+                        <outlet property="verboseButton" destination="F2G-zW-sUF" id="EhF-OP-zb2"/>
+                        <outlet property="warningButton" destination="54f-Qe-o1C" id="mqO-3t-xgf"/>
+                    </connections>
                 </viewController>
                 <customObject id="c5u-iR-aaQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970" y="1120"/>
         </scene>
-        <!--View Controller-->
+        <!--Class Filter View Controller-->
         <scene sceneID="bQs-UJ-5ca">
             <objects>
-                <viewController id="wms-2y-8Cg" sceneMemberID="viewController">
+                <viewController id="wms-2y-8Cg" customClass="ClassFilterViewController" customModule="JournalClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="KOn-5u-rBR">
                         <rect key="frame" x="0.0" y="0.0" width="225" height="38"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -466,6 +488,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="wms-2y-8Cg" id="vRd-Oe-XWO"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <constraints>
@@ -477,15 +502,18 @@
                             <constraint firstAttribute="trailing" secondItem="FSr-37-SCN" secondAttribute="trailing" constant="20" id="oCw-XN-rUG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="classTextField" destination="FSr-37-SCN" id="dt3-sr-BJ1"/>
+                    </connections>
                 </viewController>
                 <customObject id="tGa-VP-cU9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970" y="1347"/>
         </scene>
-        <!--View Controller-->
+        <!--Context Filter View Controller-->
         <scene sceneID="ytv-7P-GIh">
             <objects>
-                <viewController id="Jjt-tP-wn0" sceneMemberID="viewController">
+                <viewController id="Jjt-tP-wn0" customClass="ContextFilterViewController" customModule="JournalClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="B4I-te-MFa">
                         <rect key="frame" x="0.0" y="0.0" width="225" height="68"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -505,6 +533,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="Jjt-tP-wn0" id="u7h-TM-8wV"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0m3-ws-sMu">
                                 <rect key="frame" x="18" y="11" width="56" height="17"/>
@@ -521,6 +552,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="Jjt-tP-wn0" id="69p-nO-hCN"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <constraints>
@@ -538,6 +572,10 @@
                             <constraint firstAttribute="trailing" secondItem="8Nl-M8-1WK" secondAttribute="trailing" constant="20" id="vJ1-ea-kPp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contextNameTextField" destination="02y-bj-aBa" id="dwN-jC-ClM"/>
+                        <outlet property="contextValueTextField" destination="8Nl-M8-1WK" id="kzP-F3-10m"/>
+                    </connections>
                 </viewController>
                 <customObject id="JR5-Un-J7l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

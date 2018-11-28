@@ -15,6 +15,9 @@ protocol LogEntriesManagerDelegate {
 protocol LogEntriesManagerProtocol {
     var delegates: MulticastDelegate<LogEntriesManagerDelegate> { get set }
     var logEntries: [LogEntry] { get }
+    var logEntryFilters: [LogEntryFilter] { get set }
+    
+    func filteringChanged()
 }
 
 class LogEntriesManager: LogEntriesManagerProtocol {
@@ -28,8 +31,15 @@ class LogEntriesManager: LogEntriesManagerProtocol {
     
     var delegates = MulticastDelegate<LogEntriesManagerDelegate>()
     var logEntries: [LogEntry] {
-        return logEntryStore.logEntries
+        return logEntryStore.logEntries.filter({ logEntry -> Bool in
+            return logEntryFilters.map({ logEntryFilter -> Bool in
+                return logEntryFilter.filter(logEntry)
+            }).reduce(true, { (isIncluded, filterResult) -> Bool in
+                return isIncluded && filterResult
+            })
+        })
     }
+    var logEntryFilters = [LogEntryFilter]()
     
     // MARK: - Lifecycle methods
     
@@ -43,6 +53,12 @@ class LogEntriesManager: LogEntriesManagerProtocol {
         }
     }
     
+    // MARK: - Action methods
+    
+    func filteringChanged() {
+        notifyDelegates()
+    }
+    
     // MARK: - Event handler methods
     
     private func handleMessageArrived(_ message: String) {
@@ -50,11 +66,15 @@ class LogEntriesManager: LogEntriesManagerProtocol {
             if let messageData = message.data(using: .utf8) {
                 let logEntry = try JSONDecoder().decode(LogEntry.self, from: messageData)
                 logEntryStore.addLogEntry(logEntry)
-                delegates.invoke { $0.logEntriesChanged() }
+                notifyDelegates()
             }
         } catch {
             
         }
+    }
+    
+    private func notifyDelegates() {
+        delegates.invoke { $0.logEntriesChanged() }
     }
     
 }
