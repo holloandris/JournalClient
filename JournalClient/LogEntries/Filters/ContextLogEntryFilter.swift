@@ -17,7 +17,7 @@ class ContextLogEntryFilter: LogEntryFilter {
     // MARK: LogEntryFilter
     
     func filter(_ logEntry: LogEntry) -> Bool {
-        if let filteredContextName = filteredContextName, let filteredContextValue = filteredContextValue {
+        if let filteredContextName = filteredContextName, let filteredContextValue = filteredContextValue, !filteredContextName.isEmpty, !filteredContextValue.isEmpty {
             if let logEntryContextValue = logEntry.details[filteredContextName] {
                 return filteredContextValue == logEntryContextValue
             } else { return false }

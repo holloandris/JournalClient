@@ -16,7 +16,7 @@ class ClassLogEntryFilter: LogEntryFilter {
     // MARK: LogEntryFilter
     
     func filter(_ logEntry: LogEntry) -> Bool {
-        if let filteredClass = filteredClass, filteredClass.count > 0 {
+        if let filteredClass = filteredClass, !filteredClass.isEmpty {
             if let logEntryClass = logEntry.details["Class"] {
                 return filteredClass == logEntryClass
             } else { return false }
