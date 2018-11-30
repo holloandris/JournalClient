@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D089E6421B0FE8C00833C64 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		8D3785F221863CF100B4B33D /* LogEntryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryStore.swift; sourceTree = "<group>"; };
 		8D3785F521863E4C00B4B33D /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
 		8D3785F721865D9400B4B33D /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
@@ -177,6 +178,7 @@
 		8D9D3EB6213D2DB900087E46 = {
 			isa = PBXGroup;
 			children = (
+				8D089E6421B0FE8C00833C64 /* Readme.md */,
 				8D9D3EC1213D2DB900087E46 /* JournalClient */,
 				8D9D3ED4213D2DBC00087E46 /* JournalClientTests */,
 				8D9D3EDF213D2DBC00087E46 /* JournalClientUITests */,
